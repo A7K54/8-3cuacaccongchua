@@ -356,7 +356,14 @@ const volumeSlider = document.getElementById("volume-slider");
 volumeSlider.addEventListener("input", () => {
     music.volume = volumeSlider.value;
 });
+const links = document.querySelectorAll('.card');
 
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        music.pause();
+        music.currentTime = 0;
+    });
+});
 </script>
 </body>
 </html>
